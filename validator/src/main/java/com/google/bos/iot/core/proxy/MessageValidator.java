@@ -44,7 +44,7 @@ public class MessageValidator {
       return ImmutableList.of();
     } catch (ValidationException e) {
       return e.getAllMessages();
-    } catch (ProcessingException | JsonProcessingException ex) {
+    } catch (IOException | ProcessingException | JsonProcessingException ex) {
       return ImmutableList.of(ex.getMessage());
     }
   }
